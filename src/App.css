@@ -5,6 +5,8 @@
 }
 
 #opMargin{
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,6 +14,10 @@
   height: 50px;
   width: 100%;
   background-color: lightgrey;
+}
+
+#pageLayout{
+  display: flex;
 }
 
 #title{
@@ -51,11 +57,17 @@
 #products{
   width: 100%;
   height: 300px;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+#productPTag{
+  background-color: whitesmoke;
+  opacity: .9;
+  border-radius: 5px;
 }
 
 #productButton{
@@ -66,18 +78,51 @@
   align-items: center;
   font-size: 20px;
   border: black 3px solid;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
 }
 
 #productSpotlight{
+  width: fit-content;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#carosel{
   width: 100%;
   height: 350px;
-  background-color: rgb(109, 109, 109);
+  background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 100px;
-  font-weight: 500;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+div::-webkit-scrollbar{
+  display: none;
+}
+
+#prodIcon{
+  width: 200px;
+  height: 250px;
+  font-size: 8px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(216, 216, 216);
+}
+
+#prodName {
+  width: 98%;
+  color: black;
+  font-size: 10px;
+  text-align: center;
+}
+
+#prodImage {
+  width: 100%;
 }
 
 #footer{
@@ -111,3 +156,30 @@
   margin: 2px;
 }
 
+#lowerScreen{
+  position: fixed;
+  top: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100% + 200px;
+
+}
+
+#pageContent{
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid rgb(211, 211, 211) 1px;
+}
+
+#pageNumbers{
+  display: flex;
+  border: solid 1px black;
+}
+
+#numbers{
+  margin: 3px;
+}
