@@ -23,16 +23,28 @@ def get_products():
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products")
             products = cursor.fetchall();
-            print(products);
+            #print(products);
     return products
 
 @app.get("/lowers")
 def get_lowers():
+    #page = request.args.get('p')
+
+    #if page == '1':
+        #beginning = int(page) * 10 - 10
+        #end = int(page) * 10
+    #else:
+        #beginning = int(page) * 10 - 9
+        #end = int(page) * 10
+
+    #print(beginning)
+    #print(end)
     with connection:
         with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM products WHERE type='lower'")
-            products = cursor.fetchall();
-    return products
+            lowers = cursor.fetchall();
+            #print('testing ' + page)
+    return lowers
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:drink7up@localhost/ffl'
 #db = SQLAlchemy(app)

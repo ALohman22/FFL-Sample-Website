@@ -20,6 +20,7 @@ function App() {
           <Route path='/lowers' element={<Lowers/>}></Route>
           <Route path='/barrels' element={<Barrels/>}></Route>
           <Route path='/parts' element={<Parts/>}></Route>
+          
         </Routes>
       </BrowserRouter>
     </div>

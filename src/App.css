@@ -14,6 +14,7 @@
   height: 50px;
   width: 100%;
   background-color: lightgrey;
+  z-index: 1;
 }
 
 #pageLayout{
@@ -157,14 +158,14 @@ div::-webkit-scrollbar{
 }
 
 #lowerScreen{
-  position: fixed;
-  top: 49px;
+  position: absolute;
+  top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100% + 200px;
-
+  z-index: 0;
 }
 
 #pageContent{
@@ -176,10 +177,28 @@ div::-webkit-scrollbar{
 }
 
 #pageNumbers{
+  margin: 10px;
   display: flex;
   border: solid 1px black;
 }
 
-#numbers{
-  margin: 3px;
+.numbers{
+  padding: 10px;
+  margin: 0px;
+}
+
+#numbersHighlighted{
+  padding: 10px;
+  margin: 0px;
+  background-color: rgb(109, 109, 109);
+}
+
+.numbers:hover{
+  background-color: rgb(129, 129, 129);
+  cursor: pointer;
+}
+
+#numbersHighlighted:hover{
+  background-color: rgb(129, 129, 129);
+  cursor: pointer;
 }
